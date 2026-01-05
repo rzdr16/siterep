@@ -1,0 +1,242 @@
+
+
+/* =====================
+   RESET & GLOBAL
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  color: #1f2937;
+
+  background-image: url("images/fe0f656519904eaefe89931ae45d18ad.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* overlay biar background ga ganggu */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-color: rgba(245, 247, 250, 0.92);
+  z-index: -1;
+}
+
+/* =====================
+   CONTAINER
+===================== */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem;
+}
+
+/* =====================
+   HEADER
+===================== */
+.site-header {
+  background-color: #0f172a;
+  color: white;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.logo h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.tagline {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+/* NAV */
+.main-nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: #60a5fa;
+  transition: 0.3s;
+}
+
+.main-nav a:hover::after {
+  width: 100%;
+}
+
+/* =====================
+   HERO
+===================== */
+.hero {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.hero h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: auto;
+  color: #475569;
+}
+
+/* =====================
+   SECTION CARD STYLE
+===================== */
+section {
+  margin: 4rem auto;
+}
+
+section > .container {
+  background-color: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+}
+
+/* =====================
+   KOLEKSI
+===================== */
+.koleksi-unggulan h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 1.8rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background-color: #f8fafc;
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+
+.card h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* =====================
+   BOOK GALLERY
+===================== */
+.book-grid {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.book {
+  width: 140px;
+  text-align: center;
+}
+
+
+.book img {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 10px;
+  background-color: white;
+  padding: 6px;
+  box-shadow: 0 10px 20px rgba(151, 31, 31, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.book img:hover {
+  transform: translateY(-6px);
+}
+
+.book .title {
+  font-weight: 600;
+  margin-top: 0.6rem;
+}
+
+.book .author {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+/* =====================
+   MEMBERSHIP
+===================== */
+.login-form {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.login-form label {
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.login-form input {
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #cbd5f5;
+}
+
+.login-form button {
+  margin-top: 1rem;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #2563eb;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #1d4ed8;
+}
+
+/* =====================
+   FOOTER
+===================== */
+.site-footer {
+  background-color: #0f172a;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+}
